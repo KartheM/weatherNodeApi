@@ -1,5 +1,5 @@
 "use strict";
-var API_KEY = '667100d97045b3055daba4522ce1b839'; 
+var API_KEY = 'yourapikey'; 
 const request = require('request'); 
 module.exports.hello = async (event) => {
   return {
