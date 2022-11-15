@@ -1,0 +1,25 @@
+org: kartheeswari
+app: aws-node
+service: aws-node-http
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  weatherapi:
+    handler: handler.weatherapi
+    events:
+      - httpApi:
+          path: /weatherapi
+          method: post
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+
+plugins:
+  - serverless-offline
